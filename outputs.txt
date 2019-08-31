@@ -1,0 +1,6 @@
+<progName>, <input>, <output>
+basic.q, 5, 25
+nested.q, 5, 50
+deepNested.q, 5, 60
+compoundWithParenthesis.q, 5, 50
+compund.q, 5, 50
