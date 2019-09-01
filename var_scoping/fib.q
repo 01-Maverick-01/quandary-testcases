@@ -1,7 +1,7 @@
-int fib(int n) {
-  if (n < 2)
-    return n;
-  return fib(n - 1) + fib(n - 2);
+int fib(int arg) {
+  if (arg < 2)
+    return arg;
+  return fib(arg - 1) + fib(arg - 2);
 }
 
 Q main(int arg) {
