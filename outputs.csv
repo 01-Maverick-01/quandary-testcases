@@ -4,8 +4,8 @@ square_brackets/nested.q, 5, 50
 square_brackets/deepNested.q, 5, 60
 square_brackets/compoundWithParenthesis.q, 5, 50
 square_brackets/compund.q, 5, 50
-var_scoping/fact.q, 5, 120
-var_scoping/fib.q, 6, 8
+var_scoping/fact.q, 5, (5. 120)
+var_scoping/fib.q, 6, (6 . 8)
 var_scoping/parentScope.q, 6, 36
 var_scoping/childScope.q, 6, (0 . nil)
 var_scoping/nestedMethodCalls.q, 5, (5 . (6 . 7))

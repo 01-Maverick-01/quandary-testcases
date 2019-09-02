@@ -5,5 +5,5 @@ int fib(int arg) {
 }
 
 Q main(int arg) {
-  return (fib(arg));
+  return (arg . fib(arg));
 }

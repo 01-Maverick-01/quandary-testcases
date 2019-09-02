@@ -4,5 +4,5 @@ int fact(int arg){
 }
 
 int main(int arg) {
-   return fact(arg);
+   return arg . fact(arg);
 }
