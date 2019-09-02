@@ -11,5 +11,6 @@ This repo has testcases that you can use to test your quandary implementation. T
 ##### Running autotest:
 * Make sure that your skeleton interpreter is built with the latest changes before kicking of autotest.
 * When prompted for paths, make sure that you specify absolute paths
-* Run the AutoTest.java file to kick of the tests
+* Run the `AutoTest.java` file to kick of the tests
+* Make sure that you update the path to jflex and cup in the `RunTestCase.sh` script file.
 * NOTE: I have only tested with linux on devbox, so most probably there are some bugs with the AutoTest. If you find any, please fix it or let me know and i will fix it.
