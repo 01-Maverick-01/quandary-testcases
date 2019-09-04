@@ -3,6 +3,6 @@ int fact(int arg){
    return (arg * fact(arg-1));
 }
 
-int main(int arg) {
+Q main(int arg) {
    return arg . fact(arg);
 }

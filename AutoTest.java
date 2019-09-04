@@ -13,9 +13,9 @@ public class AutoTest{
         Scanner sc = new Scanner(System.in);
         System.out.println("Make sure that skeleton interpretor is built before running autotest");
         System.out.println("Enter root path. Ex: '/home/maverick/6341-Public'");
-        String rootPath = sc.nextLine();
+        String rootPath = "/home/maverick/6341-Public"; //sc.nextLine();
         System.out.println("Enter path to testcases. Ex: '/home/maverick/quandary-testcases'");
-        String testcaseFolder = sc.nextLine();
+        String testcaseFolder = "/home/maverick/6341-Public/quandary-testcases"; //sc.nextLine();
         sc.close();
         String scriptFile = testcaseFolder + "/" + "RunTestCase.sh";
         List<String> failedTestCases = new ArrayList<String>();
@@ -37,7 +37,7 @@ public class AutoTest{
                 process.waitFor();
                 StringBuilder expected = new StringBuilder(), returned = new StringBuilder();
                 if (AnalyzeOutput(output, expected, returned) == false) {
-                    String msg = "Testcase: $testcase\n\tReferenceReturned: $ref\n\tSkeletonReturned: $ske";
+                    String msg = "Testcase: $testcase\n   ReferenceReturned: $ref\n   SkeletonReturned: $ske";
                     msg = msg.replace("$testcase", testName).replace("$ref", expected).replace("$ske", returned);
                     failedTestCases.add(msg);
                 }
@@ -46,12 +46,14 @@ public class AutoTest{
             System.out.println(e.getMessage());
         }
 
+        System.out.println("\n\n--------------RunCompleted: Generating Report--------------");
         if (failedTestCases.size() > 0) {
             System.out.println("Number of testcases that failed: " + failedTestCases.size());
             failedTestCases.forEach(System.out::println);
         } else {
             System.out.println("All testcases passed");
         }
+        System.out.println("------------------------------------------------------------");
     }
 
     private static List<String> GetTestFiles(String testcaseFolderPath) {
