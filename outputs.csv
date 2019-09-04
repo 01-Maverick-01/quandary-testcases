@@ -11,4 +11,5 @@ var_scoping/childScope.q, 6, (0 . nil)
 var_scoping/nestedMethodCalls.q, 5, (5 . (6 . 7))
 var_scoping/doubleDecl_legal.q, 5 
 var_scoping/childScopeNestedIf.q, 5, (((0 . 1002) . 0) . 1001)
+var_scoping/childScopeWhile.q, 5, ((30 . 11) . 0) 
 typecheck/double_declare.q, <Error>
