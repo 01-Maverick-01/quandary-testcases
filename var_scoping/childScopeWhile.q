@@ -15,6 +15,6 @@ Q main(int args)
     c = wint;   
     a = a - 1;  
   } 
-  int d = 0; 
+  int d = wint; 
   return a . c . d;  
 }
