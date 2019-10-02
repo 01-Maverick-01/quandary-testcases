@@ -13,9 +13,9 @@ public class AutoTest{
         Scanner sc = new Scanner(System.in);
         System.out.println("Make sure that skeleton interpretor is built before running autotest");
         System.out.println("Enter root path. Ex: '/home/maverick/6341-Public'");
-        String rootPath = sc.nextLine();
+        String rootPath = "/home/maverick/6341-Public"; //sc.nextLine();
         System.out.println("Enter path to testcases. Ex: '/home/maverick/quandary-testcases'");
-        String testcaseFolder = sc.nextLine();
+        String testcaseFolder = "/home/maverick/6341-Public/quandary-testcases"; //sc.nextLine();
         sc.close();
         String scriptFile = testcaseFolder + "/" + "RunTestCase.sh";
         List<String> failedTestCases = new ArrayList<String>();
@@ -72,6 +72,7 @@ public class AutoTest{
     private static boolean AnalyzeOutput(StringBuilder output, StringBuilder expectedInterpreter, StringBuilder returnedInterpreter,
         StringBuilder expectedProcess, StringBuilder returnedProcess) {
         String[] strings = output.toString().split("\n");
+        //System.out.println(output);
         for (int index = 0; index < strings.length; index++)
         {
             try {
