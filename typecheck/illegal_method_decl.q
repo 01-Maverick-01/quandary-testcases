@@ -3,6 +3,6 @@ Q main(int arg) {
 }
 
 int A(int param, Cell param) {
-  return parma.param;
+  return param.param;
 }
 

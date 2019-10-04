@@ -24,3 +24,14 @@ typecheck/missing_return.q, 5, Static checking error: Last statement of A must b
 typecheck/no_return.q, 5, Static checking error: Last statement of A must be a return statement
 typecheck/last_stmt_not_return.q, 5, Static checking error: Last statement of A must be a return statement
 typecheck/illegal_method_decl.q, 5, Static checking error: Variable param already exists
+typecheck/invalid_method_call.q, 5, Static checking error: Type int cannot be converted to type Cell
+typecheck/invalid_method_call_2.q, 5, Static checking error: Parameter count mismatch for call to A
+typecheck/invalid_method_call_3.q, 5, Static checking error: Parameter count mismatch for call to A
+typecheck/reserved_method.q, 5, Static checking error: Function free already exists
+typecheck/reserved_method_2.q, 5, Static checking error: Function free already exists
+typecheck/invalid_return_type.q, 5, Static checking error: Type Cell cannot be converted to type int
+
+
+
+
+
