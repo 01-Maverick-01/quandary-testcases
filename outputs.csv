@@ -30,7 +30,11 @@ typecheck/invalid_method_call_3.q, 5, Static checking error: Parameter count mis
 typecheck/reserved_method.q, 5, Static checking error: Function free already exists
 typecheck/reserved_method_2.q, 5, Static checking error: Function free already exists
 typecheck/invalid_return_type.q, 5, Static checking error: Type Cell cannot be converted to type int
-
+varScoping/childScope_err.q, 5, Static checking error: Variable arg already exists
+varscoping/childScope_err_2.q, 5, Static checking error: Variable b already exists
+typecheck/mutable_var.q, 5, Static checking error: Can't write to immutable variable b
+typecheck/mutable_var_2.q, 5, Static checking error: Can't write to immutable variable c
+typecheck/mutable_func.q, 5, Static checking error: Can't call mutable function setLeft from immutable function B
 
 
 
