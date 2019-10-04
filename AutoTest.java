@@ -1,14 +1,17 @@
 import java.io.*;
+import java.util.*;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Scanner;
 
 public class AutoTest{
+    public static final String[] ignoreList = new String[] {
+        "/quandary-examples/counter.q",
+        "/quandary-examples/lists.q",
+        "/quandary-examples/sort.q"
+    };
+
     public static void main(String args[]){
         Scanner sc = new Scanner(System.in);
         System.out.println("Make sure that skeleton interpretor is built before running autotest");
@@ -19,10 +22,17 @@ public class AutoTest{
         sc.close();
         String scriptFile = testcaseFolder + "/" + "RunTestCase.sh";
         List<String> failedTestCases = new ArrayList<String>();
+        List<String> skippedTestCases = new ArrayList<String>();
         try {
             String commandString = "/bin/sh $script $root $prog $arg".replace("$script", scriptFile).replace("$root", rootPath);
             for(String file : GetTestFiles(testcaseFolder)) {
                 String testName = file.replace(testcaseFolder, "");
+                if (Arrays.asList(ignoreList).contains(testName)) {
+                    System.out.println("Skipping test: " + testName);
+                    skippedTestCases.add(testName);
+                    continue; 
+                }
+
                 System.out.println("Running test: " + testName);
 
                 Process process = Runtime.getRuntime().exec(commandString.replace("$prog", file).replace("$arg", "5"));
@@ -53,6 +63,11 @@ public class AutoTest{
             failedTestCases.forEach(System.out::println);
         } else {
             System.out.println("All testcases passed");
+        }
+
+        if (skippedTestCases.size() > 0) {
+            System.out.println("\nNumber of testcases that were skipped: " + skippedTestCases.size());
+            skippedTestCases.forEach(System.out::println);
         }
         System.out.println("------------------------------------------------------------");
     }
