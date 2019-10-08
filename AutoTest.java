@@ -87,7 +87,7 @@ public class AutoTest{
     private static boolean AnalyzeOutput(StringBuilder output, StringBuilder expectedInterpreter, StringBuilder returnedInterpreter,
         StringBuilder expectedProcess, StringBuilder returnedProcess) {
         String[] strings = output.toString().split("\n");
-        System.out.println(output);
+        // System.out.println(output);
         for (int index = 0; index < strings.length; index++)
         {
             try {
