@@ -35,7 +35,7 @@ varscoping/childScope_err_2.q, 5, Static checking error: Variable b already exis
 typecheck/mutable_var.q, 5, Static checking error: Can't write to immutable variable b
 typecheck/mutable_var_2.q, 5, Static checking error: Can't write to immutable variable c
 typecheck/mutable_func.q, 5, Static checking error: Can't call mutable function setLeft from immutable function B
-
+typecheck/dynamic_cast.q, 5, Dynamic cast to Cell for value null failed
 
 
 
