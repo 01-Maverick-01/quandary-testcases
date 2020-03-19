@@ -2,9 +2,10 @@ mutable Q main(int arg) {
 	if (arg == 0) {
 	    return nil;
 	  }
-	Cell list = orderedList(arg);
-	Cell f = flip(list);
-	return f;
+	mutable Cell list = orderedList(arg);
+	list = flip(list);
+	Cell a = orderedList(arg);
+	return list;
 }
 
 Cell orderedList(int length) {
@@ -18,6 +19,6 @@ mutable Cell flip(Cell list) {
 	if (isAtom(left(ret)) == 0)
 		int i = setLeft(ret, flip((Cell)left(ret)));
 	if (isAtom(right(ret)) == 0)
-		int i = setRight(ret, flip((Cell)right(ret)));
+		int j = setRight(ret, flip((Cell)right(ret)));
 	return ret;
 }
